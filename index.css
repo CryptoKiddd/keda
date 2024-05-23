@@ -111,7 +111,7 @@ a {
   display: none;
   position: absolute;
   left: -10px;
-  bottom: -502px;
+  bottom: -460px;
   background: #FFFFFF;
   padding: 33px;
   z-index: 100;
@@ -119,6 +119,7 @@ a {
   opacity: 0;
   list-style: none;
   padding-bottom: 10px;
+  padding-right: 0;
 
  
 }
@@ -126,6 +127,7 @@ a {
     border-bottom: 1px solid #F2F2F2;
     color: #8E8E8E;
     padding: 8px 0 ;
+    width: 100%;
 }
 .submenu li:hover{
     color: black;
@@ -134,7 +136,7 @@ a {
 .expanded-submenu{
     position: absolute;
     display: none;
-    left: 257px;
+    left: 220px;
     width: 237px;
     height: 460px;
     top: 0;
