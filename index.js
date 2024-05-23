@@ -35,3 +35,48 @@ bullets.forEach((bullet, index) => {
     });
 });
 
+
+
+
+
+
+///sakrebulos da meriis karuselebi
+class Carousel {
+    constructor(containerId) {
+        this.container = document.getElementById(containerId);
+        this.carousel = this.container.querySelector('.carousel');
+        this.prevButton = this.container.querySelector('.carousel-button.prev');
+        this.nextButton = this.container.querySelector('.carousel-button.next');
+        this.currentIndex = 0;
+
+        this.prevButton.addEventListener('click', () => this.prev());
+        this.nextButton.addEventListener('click', () => this.next());
+
+        this.updateCarousel();
+    }
+
+    updateCarousel() {
+        const itemWidth = this.carousel.querySelector('.carousel-item').clientWidth;
+        this.carousel.style.transform = `translateX(${-this.currentIndex * itemWidth}px)`;
+    }
+
+    prev() {
+        if (this.currentIndex > 0) {
+            this.currentIndex--;
+            this.updateCarousel();
+        }
+    }
+
+    next() {
+        if (this.currentIndex < this.carousel.children.length - 4) {
+            this.currentIndex++;
+            this.updateCarousel();
+        }
+    }
+}
+
+// Create instances of Carousel
+document.addEventListener('DOMContentLoaded', () => {
+    const carousel1 = new Carousel('carousel1');
+    const carousel2 = new Carousel('carousel2');
+});
