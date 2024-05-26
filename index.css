@@ -393,6 +393,12 @@ color: #8e8e8e;
 .news-right{
   height: 100%;
   background: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 14px;
+  gap: 26px;
+  padding-top: 26px;
 }
 
 .news-right img{
@@ -447,4 +453,27 @@ color: #8e8e8e;
   background-color: #fff;
   border-radius: 50%;
   transform: translate(-50%, -50%);
+}
+
+
+.news-right a{
+  max-width: 250px;
+  width: 100%;
+  padding: 14px;
+  display: flex;align-items: center;
+  gap: 7px;
+  border: 1px solid #F2F2F2;
+  border-radius: 10px;
+  height: 40px;
+ 
+  box-shadow: 0px 5px 4.5px rgba(0, 0, 0, 0.03);
+}
+.news-right a img{
+  box-sizing: content-box;
+  padding-right: 10px;
+  border-right: 1px solid #E2E2E2;
+}
+.news-calendar{
+  height: 274px;
+  width: 256px;
 }
