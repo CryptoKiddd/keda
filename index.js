@@ -1,3 +1,19 @@
+const lang = document.getElementById('lang')
+
+lang.addEventListener('click',function(){
+    if(this.textContent ==="eng"){
+        this.textContent = "ქარ"
+        return
+
+    }
+    this.textContent = "eng"
+    console.log('lcliked')
+
+})
+
+
+
+
 
 const prevButton = document.querySelector('.prev');
 const nextButton = document.querySelector('.next');
@@ -45,8 +61,8 @@ class Carousel {
     constructor(containerId) {
         this.container = document.getElementById(containerId);
         this.carousel = this.container.querySelector('.carousel');
-        this.prevButton = this.container.querySelector('.carousel-button.prev');
-        this.nextButton = this.container.querySelector('.carousel-button.next');
+        this.prevButton = this.container.querySelector('.prev');
+        this.nextButton = this.container.querySelector('.next');
         this.currentIndex = 0;
 
         this.prevButton.addEventListener('click', () => this.prev());

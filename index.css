@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 * {
   font-family: Arial, sans-serif;
   box-sizing: border-box;
@@ -40,13 +44,21 @@ a {
   width: 65px;
   height: 88px;
 }
-.topbar .searchbar {
-  /* display: flex;
-  align-items: center;
-  justify-content: center; */
+ .searchbar {
+  display: flex;
   justify-self: end;
   
-  right: 200px;
+   margin-right: 50px;
+  gap: 7px;
+}
+.searchbar img{
+  padding-right: 5px;
+  border-right: 1px solid #E2E2E2;
+}
+.searchbar span{
+  height:20px ;
+  width: 20px;
+  cursor: pointer;
 }
 
 .navigation {
@@ -220,13 +232,20 @@ a {
 
 .prev,
 .next {
-  color: #333333;
-  border: none;
-  background: white;
+
   cursor: pointer;
-  padding: 6px 8px;
-  border: 1px solid #333333;
-  border-radius: 25px;
+
+
+}
+
+.next:hover path{
+  stroke:#333333;
+  transition: 250ms ease;
+
+}
+.prev:hover path{
+  stroke: #333333;
+  transition: 250ms ease;
 }
 
 .bullets {
@@ -285,9 +304,26 @@ news section .////////////
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-  gap: 137px;
-  padding-top: 75px;
+  /* align-items: center; */
+  gap: 50px;
+  /* padding-top: 75px; */
+}
+.news-left h2{
+  font-size: 30px;
+  color: #333333;
+  padding-top: 50px;
+}
+.news-left h3{
+  margin-bottom: 8px;
+  font-size: 18px;
+}
+.sakrebulo-news h3{
+  color:#DA251C
+
+}
+.meria-news h3{
+  color:#00923f
+
 }
 
 
@@ -320,9 +356,11 @@ news section .////////////
   position: relative;
   text-align: center;
   background-color: white;
-  filter: drop-shadow(0px 3px 3px rgba(0,0,0,0.03 ));
+  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.03);
   border-radius: 10px;
   margin-bottom: 27px;
+  cursor: pointer;
+  transition: 350ms ease;
 
 }
 .carousel-item-date{
@@ -353,6 +391,45 @@ news section .////////////
   width: 100%;
   height: 124px;
   margin-top: 30px;
+  position: relative;
+  overflow: hidden;
+
+}
+
+.carousel-item-top::before{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #333333;
+  opacity: 0.3;
+  z-index: 2;
+  transition: 250ms ease;
+
+}
+.carousel-btns a{
+  color: #8E8E8E;
+}
+
+.carousel-item:hover .carousel-item-top::before{
+  opacity: 0;
+}
+.carousel-item:hover .carousel-item-date span{
+  opacity: 1;
+}
+.carousel-item:hover .carousel-item-bottom{
+  color: #333333;
+  font-weight: bold;
+
+}
+.carousel-item-top > img{
+  transition: transform 0.3s ease; /* Add smooth transition */
+}
+.carousel-item:hover .carousel-item-top > img{
+  transform: scale(1.1); /* Adjust the scale value as needed */
+    
 }
 .carousel-item-bottom{
   padding: 15px 17px;
@@ -371,23 +448,21 @@ color: #8e8e8e;
  
   bottom: 0;
   left: 0;
-
-}
-.carousel-button {
-
-  color: #8e8e8e;
-  border: none;
-  padding: 10px;
-  cursor: pointer;
+  display: flex;
+  gap: 34px;
+  align-items: center;
 }
 
-.carousel-button.prev {
+
+
+
+/* .carousel-button.prev {
   left: 10px;
 }
 
 .carousel-button.next {
   right: 10px;
-}
+} */
 
 
 .news-right{
@@ -399,6 +474,7 @@ color: #8e8e8e;
   font-size: 14px;
   gap: 26px;
   padding-top: 26px;
+  color: #333333;
 }
 
 .news-right img{
@@ -407,53 +483,6 @@ color: #8e8e8e;
   
 }
 
-
-.radio-group {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.radio-group label {
-  display: flex;
-  align-items: center;
-  cursor: pointer;
-}
-
-.radio-group input[type="radio"] {
-  display: none;
-}
-
-.radio-group span {
-  display: inline-block;
-  width: 30px;
-  height: 30px;
-  line-height:30px;
-  text-align: center;
-  border: 2px solid #ccc;
-  border-radius: 50%;
-  /* background-color: #fff; */
-  position: relative;
-  transition: background-color 0.3s, border-color 0.3s;
-  margin-right: 7px;
-}
-
-.radio-group input[type="radio"]:checked + span {
-  background-color: green;
-  border: 2px solid green;
-}
-
-.radio-group input[type="radio"]:checked + span::before {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 20px;
-  height: 20px;
-  background-color: #fff;
-  border-radius: 50%;
-  transform: translate(-50%, -50%);
-}
 
 
 .news-right a{
@@ -465,7 +494,8 @@ color: #8e8e8e;
   border: 1px solid #F2F2F2;
   border-radius: 10px;
   height: 40px;
- 
+  color: #333333;
+
   box-shadow: 0px 5px 4.5px rgba(0, 0, 0, 0.03);
 }
 .news-right a img{
@@ -476,4 +506,113 @@ color: #8e8e8e;
 .news-calendar{
   height: 274px;
   width: 256px;
+}
+
+.survey {
+  max-width: 256px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  
+  padding: 10px;
+  gap: 9px;
+}
+
+.survey header{
+  display: flex;
+  align-items: center;
+  width: 100%;
+  gap: 7px;
+  
+}
+.survey header img{
+  box-sizing: content-box;
+  width: 16px;
+  height: 15px;
+  padding-right: 8px;
+  border-right: 1px solid #E2E2E2;
+}
+.survey span{
+  font-size: 12px;
+font-weight: normal;
+line-height: 14px;
+width: 226px;
+}
+
+.radio-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.radio-group label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+
+
+
+.radio-group input[type="radio"] {
+  width: 18px;
+  height: 18px;
+  margin-right: 7px;
+  cursor: pointer;
+  border-radius: 10px;
+ 
+}
+
+.radio-group input[type="radio"]:checked {
+  
+  accent-color: green;
+}
+
+
+
+.radio-group input[type="radio"] + p {
+  color: #8E8E8E;
+}
+.radio-group input[type="radio"]:checked + p {
+  color: #333333;
+}
+.survey-btns{
+  max-width: 256px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+  margin-top: 19px;
+}
+.survey-btns button{
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 350ms ease;
+ 
+}
+.survey-vote{
+  width: 172px;
+  height: 31px;
+  box-shadow: 0px 3px 1.5px rgba(0, 0, 0, 0.1);
+  color: #333333;
+  background-color: #F2F2F2;
+  border-radius: 16px;
+ 
+}
+.survey-vote:hover{
+  background:#00923f;
+  color: white;
+ 
+}
+.survey-results{
+  color: #00923f;
+  background: none;
+  padding: 10px;
+}
+.survey-results:hover{
+  color: #333333;
+  scale: 1.1;
 }
