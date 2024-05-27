@@ -59,8 +59,10 @@ bullets.forEach((bullet, index) => {
 ///sakrebulos da meriis karuselebi
 class Carousel {
     constructor(containerId) {
+        this.id = containerId
         this.container = document.getElementById(containerId);
         this.carousel = this.container.querySelector('.carousel');
+
         this.prevButton = this.container.querySelector('.prev');
         this.nextButton = this.container.querySelector('.next');
         this.currentIndex = 0;
@@ -84,10 +86,19 @@ class Carousel {
     }
 
     next() {
+        if(this.id === "carousel3" || this.id === "carousel4"){
+
+            if (this.currentIndex < this.carousel.children.length-1) {
+                this.currentIndex++;
+                this.updateCarousel();
+            }
+            return
+        }
         if (this.currentIndex < this.carousel.children.length - 4) {
             this.currentIndex++;
             this.updateCarousel();
         }
+
     }
 }
 
@@ -95,4 +106,6 @@ class Carousel {
 document.addEventListener('DOMContentLoaded', () => {
     const carousel1 = new Carousel('carousel1');
     const carousel2 = new Carousel('carousel2');
+    const carousel3 = new Carousel('carousel3');
+    const carousel4 = new Carousel('carousel4');
 });
