@@ -56,7 +56,7 @@ bullets.forEach((bullet, index) => {
 
 
 
-///sakrebulos da meriis karuselebi
+
 class Carousel {
     constructor(containerId) {
         this.id = containerId
@@ -75,7 +75,15 @@ class Carousel {
 
     updateCarousel() {
         const itemWidth = this.carousel.querySelector('.carousel-item').clientWidth;
-        this.carousel.style.transform = `translateX(${-this.currentIndex * itemWidth}px)`;
+
+        if(this.id === "carousel1" || this.id === "carousel1"){
+
+            this.carousel.style.transform = `translateX(${(-this.currentIndex * itemWidth) - (this.currentIndex * 16 )}px)`;
+        }
+        this.carousel.style.transform = `translateX(${(-this.currentIndex * itemWidth +8)}px)`;
+
+        
+      
     }
 
     prev() {
@@ -102,7 +110,7 @@ class Carousel {
     }
 }
 
-// Create instances of Carousel
+
 document.addEventListener('DOMContentLoaded', () => {
     const carousel1 = new Carousel('carousel1');
     const carousel2 = new Carousel('carousel2');
