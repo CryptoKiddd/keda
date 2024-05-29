@@ -49,16 +49,21 @@ a {
   justify-self: end;
   
    margin-right: 50px;
-  gap: 7px;
+  gap: 13px;
 }
 .searchbar img{
-  padding-right: 5px;
+  padding-right: 13px;
   border-right: 1px solid #E2E2E2;
 }
 .searchbar span{
   height:20px ;
   width: 20px;
   cursor: pointer;
+  transition: 250ms ease;
+}
+.searchbar span:hover{
+ margin-left: 10px;
+ scale: 1.05;
 }
 
 .navigation {
@@ -909,17 +914,34 @@ color:#333333;
   font-weight: 500;
   border-radius: 15px;
   margin-top: 26px;
+  border: 1px solid rgba(255, 255, 255, 0);
+  transition: 350ms ease-out;
+  cursor: pointer;
 }
+.public-info-container button:hover{
+  background: white;
+  color: #da251c;
+  border: 1px solid #DA251C;
+
+}
+
 .public-info-container button:last-child{
   max-width: 537px;
   width: 100%;
   padding: 30px 0px;
-  border: none;
-  background: #00923f;font-family: "Helvetica Neue LT GEO Caps";
+  
+  background: #00923f;
+  font-family: "Helvetica Neue LT GEO Caps";
+
   font-size: 18px;
   color: white;
   font-weight: 500;
   border-radius: 15px;
+}
+.public-info-container button:last-child:hover{
+  border: 1px solid #00923f;
+  color: #00923f;
+   background: white;
 }
 
 
@@ -937,6 +959,7 @@ color:#333333;
   justify-content: center;
   align-items: center;
   gap:15px;
+  border-radius: 10px;
   flex-wrap: wrap;
 }
 .service{
@@ -976,4 +999,86 @@ color:#333333;
   width: 7px;height: 14px;
   padding-bottom: 0;
   border: none;
+}
+
+footer{
+  background: #00923f;
+  width: 100%;
+
+  margin-top: 100px;
+  height: 370px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer-container{
+  max-width: 1400px;
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 130px;
+  
+
+
+
+}
+.footer-container a,
+.footer-container span{
+  color: #FFFFFF;
+  font-size: 14px;
+  opacity: 0.7;
+
+}
+.footer-center-col-item,
+.footer-left-col-item{
+  opacity: 0.7;
+  transition: 250ms ease;
+}
+footer h4{
+  color: #FFFFFF;
+  font-size: 16px;
+}
+.footer-left-col,
+.footer-center-col{
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 400px;
+  width: 100%;
+}
+.footer-center-col-item:hover,
+.footer-left-col-item:hover{
+  opacity: 1;
+
+}
+.footer-left-col-item span{
+  display: inline-block;
+  max-width: 180px;
+  width: 100%;
+
+
+}
+.footer-left-col-item a{
+ 
+  padding-left: 15px;
+  border-left: 1px solid white;
+
+}
+footer svg{
+  margin-right: 11px;
+}
+.copyright{
+  display: flex;
+  margin: 0 auto;
+  max-width: 1400px;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 0;
+
+}
+.copyright img{
+  width: 60px;height: 20px;
 }
