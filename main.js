@@ -7,7 +7,7 @@ lang.addEventListener('click',function(){
 
     }
     this.textContent = "eng"
-    console.log('lcliked')
+    
 
 })
 
@@ -80,7 +80,7 @@ class Carousel {
         this.carousel.addEventListener('mousedown', (e) => this.startDrag(e));
         this.carousel.addEventListener('mousemove', (e) => this.drag(e));
         this.carousel.addEventListener('mouseup', () => this.endDrag());
-        this.carousel.addEventListener('mouseleave', () => this.endDrag()); // End drag if mouse leaves carousel
+        this.carousel.addEventListener('mouseleave', () => this.endDrag()); 
         this.carousel.addEventListener('touchstart', (e) => this.startDrag(e.touches[0]));
         this.carousel.addEventListener('touchmove', (e) => this.drag(e.touches[0]));
         this.carousel.addEventListener('touchend', () => this.endDrag());
