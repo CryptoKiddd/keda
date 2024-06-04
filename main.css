@@ -6,6 +6,9 @@
 html {
   scroll-behavior: smooth;
 }
+::-webkit-scrollbar{
+  width: 1px;
+}
 
 * {
   font-family: "haltvetica-geo-caps", sans-serif;
@@ -1183,7 +1186,9 @@ ABOUT KEDA PAGE
   color: inherit;
   padding: 50px 0;
   padding-inline: 120px;
-  min-height: 700px;
+  height: 700px;
+  overflow-y: scroll;
+  scrollbar-width: 1px;
  
 
 
@@ -1192,9 +1197,9 @@ ABOUT KEDA PAGE
   display: flex;
   flex-direction: column;
   gap: 10px;
-  max-width: 540px;
+  min-width: 540px;
   width: 100%;
-  padding: 5px;
+
   
 
 }
@@ -1249,9 +1254,81 @@ ABOUT KEDA PAGE
 
 
 
-.innerpage-main-left img{
+.innerpage-main-left-item img{
   width: 23px;
   height: 16px;
+}
+.innerpage-sakrebulo-news-item-right img{
+  width: 7px;
+  height: 14px;
+  margin-left: 20px;
+}
+.innerpage-sakrebulo-news-item-left img{
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+.innerpage-sakrebulo-news-item{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  max-width: 670px;
+  width: 100%;
+  height: 170px;
+  margin-bottom: 30px;
+}
+.innerpage-sakrebulo-news-item-left{
+  width: 360px;
+  height: 100%;
+  position: relative;
+  
+
+}
+.innerpage-sakrebulo-news-item-left header {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: start;
+  padding-left: 8px;
+  background: #DA251C;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  height: 30px;
+  font-size: 13px;
+  text-align: center;
+  color: white;
+  gap: 5px;
+
+}
+.innerpage-sakrebulo-news-item-left p{
+  font-size: 13px;
+  padding-left: 10px;
+  
+  border-left: 1px solid white;
+opacity: 0.5;}
+.innerpage-sakrebulo-news-item-right h4 {
+  color: #8E8E8E;
+  font-size: 16px;
+
+}
+.innerpage-sakrebulo-news-item-right p {
+  color: #C1C1C1;
+  font-size: 14px;
+  margin: 3px 0 15px 0;
+  
+
+}
+.innerpage-sakrebulo-news-item-right a{
+  color: #C1C1C1;
+  font-size: 14px;
+ 
+  
+
 }
 
 
