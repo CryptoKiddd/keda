@@ -963,6 +963,7 @@ color:#333333;
 
 .services{
   width: 100%;
+  margin-bottom: 100px;
   
 }
 .services-container{
@@ -1035,7 +1036,7 @@ footer{
   background: #00923f;
   width: 100%;
 
-  margin-top: 100px;
+  /* margin-top: 100px; */
   height: 370px;
   display: flex;
   justify-content: center;
@@ -1162,7 +1163,7 @@ ABOUT KEDA PAGE
   background-position: bottom
 
 }
-.aboutkeda{
+.innerpage-main{
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -1170,11 +1171,11 @@ ABOUT KEDA PAGE
   align-items: center;
   background: #F2F2F2;
   position: relative;
-  height: 100%;
+  /* min-height: 800px; */
  
   
 }
-.aboutkeda-bottom{
+.innerpage-main-bottom{
   max-width: 1400px;
   width: 100%;
   display: flex;
@@ -1182,11 +1183,12 @@ ABOUT KEDA PAGE
   color: inherit;
   padding: 50px 0;
   padding-inline: 120px;
+  min-height: 700px;
  
 
 
 }
-.aboutkeda-left{
+.innerpage-main-left{
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -1196,7 +1198,7 @@ ABOUT KEDA PAGE
   
 
 }
-.aboutkeda-left-item{
+.innerpage-main-left-item{
   width: 100%;
   background-color: white;
   display: flex;
@@ -1209,8 +1211,21 @@ ABOUT KEDA PAGE
   gap: 30px;
   transition: 250ms ease-out;
 
+  
 }
-.aboutkeda-left-item span {
+.innerpage-main-left h2{
+  font-size: 30px;
+  color: #333333;
+  margin-bottom: 48px;
+  
+}
+.innerpage-main-left p{
+  font-size: 14px;
+  color: #8e8e8e;
+
+
+}
+.innerpage-main-left-item span {
   padding-left: 30px;
   border-left: 1px solid #C1C1C1;
   height: 43px;
@@ -1223,9 +1238,8 @@ ABOUT KEDA PAGE
   top: -1px;
   right: 19%;
 
-  /* top: -132px; */
 }
-.aboutkeda-left-item:hover{
+.innerpage-main-left-item:hover{
   color: #333333;
   transform: translateX(10px);
  
@@ -1235,7 +1249,7 @@ ABOUT KEDA PAGE
 
 
 
-.aboutkeda-left img{
+.innerpage-main-left img{
   width: 23px;
   height: 16px;
 }
