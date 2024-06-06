@@ -489,6 +489,8 @@ color: #8e8e8e;
   gap: 26px;
   padding-top: 26px;
   color: #333333;
+
+  z-index: 2;
 }
 
 .news-right img{
@@ -1198,7 +1200,10 @@ ABOUT KEDA PAGE
   flex-direction: column;
   gap: 10px;
   min-width: 540px;
+  max-width: 749px;
   width: 100%;
+  height: 1200px;
+  overflow-y: scroll;
 
   
 
@@ -1271,19 +1276,56 @@ ABOUT KEDA PAGE
 .innerpage-sakrebulo-news-item{
   display: flex;
   align-items: center;
-  justify-content: center;
+
   gap: 15px;
-  max-width: 670px;
+  
   width: 100%;
-  height: 170px;
-  margin-bottom: 30px;
+  height: 200px;
+  margin-bottom: 44px;
+  padding-bottom: 44px;
+  border-bottom: 1px solid #E2E2E2;
 }
+
+.innerpage-main-gallery{
+  display: flex;
+  align-items: center;
+
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 20px;
+  row-gap: 10px;
+  overflow-x: auto;
+  
+}
+.innerpage-gallery-item{
+  max-width: 320px;
+  width: 100%;
+  gap: 7px;
+  flex-direction: column;
+  border: none;
+  cursor: pointer;
+  transition: 250ms ease;
+}
+.innerpage-gallery-item:hover{
+  max-width: 320px;
+  width: 100%;
+  gap: 7px;
+  flex-direction: column;
+  border: none;
+  cursor: pointer;
+  scale: 1.01;
+}
+
+
 .innerpage-sakrebulo-news-item-left{
-  width: 360px;
-  height: 100%;
+  width: 260px;
+  height: 190px;
   position: relative;
   
 
+}
+.innerpage-gallery-item-top{
+  width: 100%;
 }
 .innerpage-sakrebulo-news-item-left header {
   width: 100%;
@@ -1305,6 +1347,9 @@ ABOUT KEDA PAGE
   gap: 5px;
 
 }
+.innerpage-sakrebulo-news-item-right{
+  width: 400px;
+}
 .innerpage-sakrebulo-news-item-left p{
   font-size: 13px;
   padding-left: 10px;
@@ -1319,16 +1364,28 @@ opacity: 0.5;}
 .innerpage-sakrebulo-news-item-right p {
   color: #C1C1C1;
   font-size: 14px;
-  margin: 3px 0 15px 0;
+  margin: 40px 0 20px 0;
   
 
 }
 .innerpage-sakrebulo-news-item-right a{
   color: #C1C1C1;
   font-size: 14px;
+  display: flex;align-items: center;
+  transition: 250ms ease;
  
   
 
+}
+.innerpage-sakrebulo-news-item-right a:hover{
+  margin-left: 10px;
+  color: #333;
+}
+
+.innerpage-proj-header{
+  padding-bottom: 48px;
+  width: 100%;
+  border-bottom: 1px solid #E2E2E2;
 }
 
 
