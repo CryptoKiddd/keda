@@ -1,73 +1,95 @@
-/* styles.css */
-body {
-    font-family: Arial, sans-serif;
+* {
+    box-sizing: border-box;
+  }
+  
+.gallery-container{
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
-    margin: 0;
-    flex-direction: column;
-}
+    background: #000;
+    background: #F2F2F2;
 
-.gallery-container {
-    width: 80%;
-    max-width: 1000px;
 }
+.gallery-wrapper{
+    max-width: 800px;
+    width: 100%;
+}
+  
+  .gallery-grid {
+    width: 100%;
+    margin: 0 auto;
+  }
+  
+  .gallery {
+    margin-top: 1vw;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 2px;
+  }
+  
+  .gallery img {
+    max-width: 100%;
+    min-width: 100%;
+    min-height: 100%;
+  }
+  
+  .portrait {
+    grid-row: span 2;
+  }
 
-.main-image-container {
+  
+  .wide {
+    grid-column: span 2;
+  }
+  
+
+.gallery-display{
     display: flex;
-    align-items: center;
-    justify-content: center;
+    justify-content: center;align-items: center;
+    margin-bottom: 70px;
+    gap: 10px;
+    width: 100%;
     position: relative;
-    margin-bottom: 20px;
 }
-
-.main-image-container img {
-    width: 500px;
-    height: auto;
-    object-fit: cover;
-}
-
-.pagination-btn {
-    padding: 5px 10px;
+.gallery-image{
     cursor: pointer;
+    overflow: hidden;
+}
+.gi{
+    transition: 250ms ease;
+
+}
+.gallery-image:hover .gi{
+
+    scale: 1.1;
+}
+.gallery-btns{
     position: absolute;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    right: -50px;
     top: 50%;
     transform: translateY(-50%);
 }
-
-#prev {
-    left: -60px;
+.gallery-btns svg:nth-child(1){
+    rotate: 90deg;
 }
-
-#next {
-    right: -60px;
+.gallery-btns svg:nth-child(2){
+    rotate: 90deg;
 }
-
-.gallery-element-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 10px;
-}
-
-.gallery-element {
-    position: relative;
-    cursor: pointer;
-}
-
-.gallery-element img {
+  .gallery-main-image{
     width: 100%;
-    height: auto;
-    object-fit: cover;
-}
-
-.gallery-element p {
-    margin: 0;
-    padding: 5px;
-    background: rgba(0, 0, 0, 0.5);
-    color: white;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    text-align: center;
-}
+    height: 300px;
+  }
+  #main-image{
+    border-radius: 10px;
+  }
+  .gallery-wrapper h2{
+    margin: 50px 0;
+    color: #333333;
+  }
+  .gallery-pag{
+    padding: 30px 0;
+  }

@@ -1,54 +1,57 @@
 
-document.addEventListener('DOMContentLoaded', function () {
-    const elements = [];
-    for (let i = 1; i <= 20; i++) {
-        elements.push({
-            imgSrc: `https://via.placeholder.com/500x219?text=Image+${i}`,
-            thumbSrc: `https://via.placeholder.com/100x100?text=Thumb+${i}`,
-        });
+
+
+const container = document.getElementById('gallery')
+const mainImage = document.getElementById('main-image')
+const prev = document.querySelector('.prev')
+const next = document.querySelector('.next')
+
+console.log(container)
+
+const images = [
+    '../images/galleryImages/1.jpeg',
+    '../images/galleryImages/2.jpeg',
+    '../images/galleryImages/3.jpeg',
+    '../images/galleryImages/4.png',
+    '../images/galleryImages/1.jpeg',
+    '../images/galleryImages/2.jpeg',
+    '../images/galleryImages/3.jpeg',
+    '../images/galleryImages/1.jpeg',
+    '../images/galleryImages/2.jpeg',
+    '../images/galleryImages/3.jpeg',
+    '../images/galleryImages/1.jpeg',
+
+
+]
+mainImage.src=images[0]
+
+next.addEventListener('click',()=>{
+    images.push(images.shift())
+    mainImage.src=images[0]
+
+})
+prev.addEventListener('click',()=>{
+    images.unshift(images.pop())
+    mainImage.src=images[0]
+
+})
+images.forEach((img,idx)=>{
+    const item = document.createElement('div')
+    if(idx % 2 === 0){
+        item.classList.add('portrait')
     }
-
-    const galleryElementContainer = document.getElementById('gallery-element-container');
-    const mainImage = document.getElementById('main-image');
-    const prevButton = document.getElementById('prev');
-    const nextButton = document.getElementById('next');
-    let currentImageIndex = 0;
-
-    function renderMainImage(index) {
-        mainImage.src = elements[index].imgSrc;
+    if(idx % 9 === 0){
+        item.classList.add('wide')
     }
-
-    function renderGallery() {
-        galleryElementContainer.innerHTML = '';
-        elements.forEach((elementData, index) => {
-            const galleryElement = document.createElement('div');
-            galleryElement.classList.add('gallery-element');
-            galleryElement.innerHTML = `
-                <img src="${elementData.thumbSrc}" alt="Thumbnail">
-            `;
-            galleryElement.addEventListener('click', () => {
-                currentImageIndex = index;
-                renderMainImage(currentImageIndex);
-            });
-            galleryElementContainer.appendChild(galleryElement);
-        });
+    if(idx % 7 === 0){
+        item.classList.add('portrait')
     }
+ 
+    item.classList.add('gallery-image')
+    const gridImage = document.createElement('img')
 
-    prevButton.addEventListener('click', function () {
-        if (currentImageIndex > 0) {
-            currentImageIndex--;
-            renderMainImage(currentImageIndex);
-        }
-    });
-
-    nextButton.addEventListener('click', function () {
-        if (currentImageIndex < elements.length - 1) {
-            currentImageIndex++;
-            renderMainImage(currentImageIndex);
-        }
-    });
-
-    renderMainImage(currentImageIndex);
-    renderGallery();
-});
-
+    gridImage.src=img
+    gridImage.classList.add('gi')
+    item.appendChild(gridImage)
+    container.appendChild(item)
+})

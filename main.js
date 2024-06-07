@@ -1,13 +1,13 @@
 const lang = document.getElementById('lang')
 
-lang.addEventListener('click',function(){
-    if(this.textContent ==="eng"){
+lang.addEventListener('click', function () {
+    if (this.textContent === "eng") {
         this.textContent = "ქარ"
         return
 
     }
     this.textContent = "eng"
-    
+
 
 })
 
@@ -42,14 +42,17 @@ function goToSlide(n) {
     showSlide(n);
 }
 
-nextButton.addEventListener('click', nextSlide);
-prevButton.addEventListener('click', prevSlide);
+if(nextButton && prevButton){
 
-bullets.forEach((bullet, index) => {
-    bullet.addEventListener('click', () => {
-        goToSlide(index);
+    nextButton.addEventListener('click', nextSlide);
+    prevButton.addEventListener('click', prevSlide);
+    
+    bullets.forEach((bullet, index) => {
+        bullet.addEventListener('click', () => {
+            goToSlide(index);
+        });
     });
-});
+}
 
 
 
@@ -80,7 +83,7 @@ class Carousel {
         this.carousel.addEventListener('mousedown', (e) => this.startDrag(e));
         this.carousel.addEventListener('mousemove', (e) => this.drag(e));
         this.carousel.addEventListener('mouseup', () => this.endDrag());
-        this.carousel.addEventListener('mouseleave', () => this.endDrag()); 
+        this.carousel.addEventListener('mouseleave', () => this.endDrag());
         this.carousel.addEventListener('touchstart', (e) => this.startDrag(e.touches[0]));
         this.carousel.addEventListener('touchmove', (e) => this.drag(e.touches[0]));
         this.carousel.addEventListener('touchend', () => this.endDrag());
@@ -124,7 +127,7 @@ class Carousel {
     endDrag() {
         this.isDragging = false;
         cancelAnimationFrame(this.animationID);
-        
+
         const itemWidth = this.items[0].clientWidth;
         this.currentIndex = Math.max(0, Math.min(this.items.length - 1, Math.round(-this.currentTranslate / itemWidth)));
         this.updateCarousel();
@@ -142,8 +145,13 @@ class Carousel {
     }
 }
 
-document.addEventListener('DOMContentLoaded', () => {
-    const carousels = ['carousel1', 'carousel2', 'carousel3', 'carousel4'];
-    carousels.forEach(id => new Carousel(id));
-});
+
+const carousels = ['carousel1', 'carousel2', 'carousel3', 'carousel4'];
+carousels.forEach(id => new Carousel(id));
+
+
+
+
+
+
 
