@@ -5,6 +5,7 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 ::-webkit-scrollbar{
   width: 1px;
@@ -85,6 +86,51 @@ a {
   /* position: sticky;
   left: 0; */
 }
+#hamburger {
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  margin: 20px;
+  position: relative;
+  display: none;
+}
+
+#hamburger span {
+  background-color: black;
+  position: absolute;
+  display: block;
+  height: 2px;
+  width: 100%;
+  /* border-radius: 5px; */
+  transition: 0.1s;
+}
+
+#hamburger span:nth-child(2) {
+  top: 15px;
+}
+
+#hamburger span:nth-child(3) {
+  top: 30px;
+}
+
+#hamburger.open span:nth-child(1) {
+  transform: rotate(45deg);
+  transform-origin: left center;
+  left:3px;
+  top: -3px;
+}
+
+#hamburger.open span:nth-child(2) {
+  transform: translate(-60px);
+  opacity: 0;
+}
+
+#hamburger.open span:nth-child(3) {
+  transform: rotate(-45deg);
+  transform-origin: left center;
+  left: 3px;
+  top: 40px;
+}
 
 .navbar {
 
@@ -144,7 +190,7 @@ a {
   text-align: left;
   opacity: 0;
   list-style: none;
-  padding-right: 0;
+  padding-right: 0;top: 38px;
   margin-top: 15px;
 
  
@@ -200,6 +246,12 @@ a {
   margin-left: 80px;
 
 }
+.meria-nav-prev{
+  display: none;
+}
+.branches-nav-prev{
+  display: none;
+}
 
 
 
@@ -224,7 +276,7 @@ a {
 .hero-carousel aside {
   position: absolute;
   bottom: 30px;
-  left: 20%;
+  left: 17%;
   font-family: "Helvetica Neue LT GEO Caps";
   font-size: 30px;
 
@@ -521,7 +573,8 @@ color: #8e8e8e;
 }
 .news-calendar{
   height: 274px;
-  width: 256px;
+  max-width: 256px;
+  width: 100%;
 }
 
 .survey {
@@ -552,7 +605,8 @@ color: #8e8e8e;
   font-size: 12px;
 font-weight: normal;
 line-height: 14px;
-width: 226px;
+max-width: 226px;
+width: 100%;
 }
 
 .radio-group {
@@ -1203,8 +1257,9 @@ ABOUT KEDA PAGE
   min-width: 540px;
   max-width: 749px;
   width: 100%;
-  height: 1200px;
-  overflow-y: scroll;
+  height: 100%;
+  overflow: hidden;
+
 
   
 
@@ -1245,9 +1300,10 @@ ABOUT KEDA PAGE
 }
 .news-right-innerpages{
   position: absolute;
-  height: calc(100% + 2px);
-  top: -1px;
-  right: 19%;
+  height: 100%;
+  max-height: 967px;
+  top: 0;
+  right: 13%;
 
 }
 .innerpage-main-left-item:hover{
@@ -1255,6 +1311,9 @@ ABOUT KEDA PAGE
   transform: translateX(10px);
  
 
+}
+.innerpage-sakrebulo-news-item-left .greenbg{
+  background: #00923f;
 }
 
 
@@ -1356,7 +1415,7 @@ ABOUT KEDA PAGE
   padding-left: 10px;
   
   border-left: 1px solid white;
-opacity: 0.5;}
+opacity: 0.8;}
 .innerpage-sakrebulo-news-item-right h4 {
   color: #8E8E8E;
   font-size: 16px;
@@ -1687,8 +1746,19 @@ opacity: 0.7;}
 
 
 
+.mobile-nav{
+  display: none;
+}
+
+.meria-expanded-mobile{
+  transform: translateX(110%);
+
+}
+.meria-expanded-submenu-mobile{
+  transform: translateX(110%);
 
 
+}
 
 
 
@@ -1774,6 +1844,167 @@ opacity: 0.7;}
     justify-content: space-between;
     
   }
+  
 
+
+}
+@media only screen and (max-width: 1070px){
+  .navbar,
+  .news-container,
+  .announcments-container,
+  .citizens-container,
+  .public-info-container,
+  .services-container,
+  .footer-container,
+  .copyright,
+  .public-section-divider,
+  .container{
+    max-width: 800px;
+ 
+  }
+  .news-container{
+    max-width: 95%;
+  }
+  .navigation,.navbar{
+    width: 100%;
+    justify-content: center;
+  }
+  .news-right{
+    padding-inline:5px
+  }
+  .news-right a{
+    font-size: 14px;
+    padding: 7px;
+  }
+  .nav-item{
+    padding: 20px 20px 17px 16px;
+    
+  }
+  .nav-list a{
+    border: none;
+  }
+  .nav-list{
+    justify-content: center;
+    
+  }
+
+
+}
+@media only screen and (max-width: 983px){
+  .navigation{
+    display: none;
+  }
+  #hamburger{
+    display: block;
+    /* position: absolute; */
+    /* top: 100px;
+    left: 0px; */
+    z-index: 1101;
+  }
+  
+  .topbar,.container{
+    justify-content: space-between;
+    max-width: 100%;
+  }
+  .searchbar{
+    position: relative;
+  }
+ 
+  .mobile-nav{
+    display: block;
+    left: -100%;
+    height: 100%;
+  
+    background:#8e8e8e;
+    z-index: 10000;
+    padding: 10px;
+    overflow: hidden;
+    list-style: none;
+    position: absolute;
+  width: 300px;
+    transition: 300ms ease;
+  }
+  .main-mobile-nav{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  
+    background:#C1C1C1;
+    top: 0%;
+    left:0;
+    transition: 300ms ease;
+  
+
+  }
+  .toggle-nav{
+    left: 0%;
+    
+  }
+  .main-mobile-nav li{
+    width: 100%;
+    background:white;
+    height: 60px;
+
+    padding-left: 10px;
+    display: flex;justify-content: start;align-items: center;
+    border-bottom: 1px solid #8E8E8E;
+    /* background:#DA251C; */
+  }
+  .meria-nav-prev,.branches-nav-prev{
+    display: block;
+    fill: white;
+    z-index: 122;
+  }
+  .submenu-arrow{
+    margin-left: 20px;
+  }
+  .carousel-item{
+    min-width: calc((100% / 2) - 15.9px);
+  }
+
+
+ 
+  
+
+
+}
+@media only screen and (max-width: 660px){
+.public-info{
+  align-items: center;
+  justify-content: center;
+}
+.public-info-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.news-container{
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+}
+.announcments-wrapper{
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+footer{
+  height: 100%;
+  padding: 50px;
+}
+.footer-container{
+  flex-direction: column;
+  height: 100%;
+  gap: 30px;
+
+}
+.hero-carousel aside{
+  left: 5%;
+  font-size: 24px;
+}
+.bullets{
+padding-left: 50px;}
 
 }
