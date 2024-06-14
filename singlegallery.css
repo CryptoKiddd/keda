@@ -93,3 +93,23 @@
   .gallery-pag{
     padding: 30px 0;
   }
+  @media only screen and (max-width: 480px){
+    .gallery-btns{
+      position: relative;
+      display: flex;
+      flex-direction: row;
+      top: 22px;
+      left: 0;
+      gap: 10px;
+    }
+    .gallery-display{
+      flex-direction: column;
+    }
+    .gallery-btns svg:nth-child(1){
+      rotate: 0deg;
+    }
+    .gallery-btns svg:nth-child(2){
+      rotate: 0deg;
+    }
+  }
+

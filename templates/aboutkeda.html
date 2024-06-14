@@ -11,156 +11,279 @@
     <title>ქედის შესახებ</title>
 </head>
 <body>
-    <div class="topbar">
-        <div class="container">
-          <a href="/" class="logo">
-            <p>ქედის მუნიციპალიტეტის</p>
-            <img src="../images/logo.png" alt="" />
-            <p>keda municipality</p>
-          </a>
-  
-          <div class="searchbar">
-            <img src="../images/search-icon.png" alt="" />
-            <span id="lang">eng</span>
-          </div>
-        </div>
+  <div class="topbar">
+
+    <div class="container">
+      <div id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
       </div>
-      <div class="navigation">
-        <nav class="navbar">
-          <ul class="nav-list">
-            <a href="/">
-              <li class="nav-item">მთავარი</li>
+      <a href="/" class="logo">
+        <p>ქედის მუნიციპალიტეტის</p>
+        <img src="../images/logo.png" alt="" />
+        <p>keda municipality</p>
+      </a>
+
+      <div class="searchbar">
+        <img src="../images/search-icon.png" alt="" />
+        <span id="lang">eng</span>
+      </div>
+    </div>
+    <div class="mobile-nav">
+      <div class="mbn-wrapper">
+
+
+        <ul class="main-mobile-nav">
+          <li><a href="/"> მთავარი</a></li>
+          <li><a href="/templates/aboutkeda.html">ქედის შესახებ</a></li>
+          <li id="meria-expand-btn">
+            <p>მერია
+            </p>
+            <img class="submenu-arrow" src="../images/arrow-right.png" alt="" srcset="">
+
+          </li>
+          <li><a href="/templates/textpage.html">საკრებულო</a></li>
+          <li><a href="/templates/textpage.html">მოქალაქისთვის</a></li>
+          <li><a href="/templates/textpage.html">საჯარო ინფორმაცია</a></li>
+          <li><a href="/templates/aboutkeda.html">სერვისები</a></li>
+          <li><a href="/templates/contacts.html">კონტაქტი</a></li>
+        </ul>
+        <ul id="meria-expand-menu" class=" main-mobile-nav meria-expanded-mobile">
+          <li>
+
+            <svg xmlns="http://www.w3.org/2000/svg" class="meria-nav-prev" width="30.585" height="30.585"
+              viewBox="302.098 465.152 30.585 30.585">
+              <g data-name="Group 8104">
+                <path
+                  d="M317.39 465.152c8.446 0 15.293 6.847 15.293 15.293 0 8.446-6.847 15.292-15.293 15.292-8.446 0-15.292-6.846-15.292-15.292s6.846-15.293 15.292-15.293"
+                  stroke-linejoin="round" stroke-linecap="round" stroke="#c1c1c1" fill="transparent"
+                  data-name="Path 56" />
+                <path d="m310.593 480.445 6.797-6.797" stroke-linejoin="round" stroke-linecap="round" stroke="#c1c1c1"
+                  fill="transparent" data-name="Path 57" />
+                <path d="M310.593 480.445h13.594" stroke-linejoin="round" stroke-linecap="round" stroke="#c1c1c1"
+                  fill="transparent" data-name="Path 58" />
+                <path d="m317.39 487.242-6.797-6.797" stroke-linejoin="round" stroke-linecap="round" stroke="#c1c1c1"
+                  fill="transparent" data-name="Path 59" />
+              </g>
+            </svg>
+          </li>
+          <li> <a href="/templates/textpage.html">მერიის შესახებ</a> </li>
+          <li> <a href="/templates/textpage.html">სიახლეები</a> </li>
+          <li> <a href="/templates/textpage.html">განცხადებები</a> </li>
+          <li> <a href="/templates/textpage.html">მერი</a> </li>
+          <li> <a href="/templates/textpage.html">მერის მოადგილეები</a> </li>
+          <li id="branches-expand-btn">
+            <a href="/templates/textpage.html">სამსახურები</a>
+            <img class="submenu-arrow" src="../images/arrow-right.png" alt="" srcset="">
+
+          </li>
+          <li> <a href="/templates/textpage.html">მუნიციპალური</a> </li>
+          <li> <a href="/templates/textpage.html"> სტრუქტურული ხე</a> </li>
+          <li> <a href="/templates/textpage.html"> მემორანდუმები</a> </li>
+          <li> <a href="/templates/textpage.html"> აუქციონები</a> </li>
+          <li> <a href="/templates/textpage.html"> ტენდერები</a> </li>
+
+
+        </ul>
+
+        <ul id="branches-expand-menu" class=" main-mobile-nav meria-expanded-submenu-mobile">
+          <li>
+
+            <svg xmlns="http://www.w3.org/2000/svg" class="branches-nav-prev" width="30.585" height="30.585"
+              viewBox="302.098 465.152 30.585 30.585">
+              <g data-name="Group 8104">
+                <path
+                  d="M317.39 465.152c8.446 0 15.293 6.847 15.293 15.293 0 8.446-6.847 15.292-15.293 15.292-8.446 0-15.292-6.846-15.292-15.292s6.846-15.293 15.292-15.293"
+                  stroke-linejoin="round" stroke-linecap="round" stroke="#c1c1c1" fill="transparent"
+                  data-name="Path 56" />
+                <path d="m310.593 480.445 6.797-6.797" stroke-linejoin="round" stroke-linecap="round" stroke="#c1c1c1"
+                  fill="transparent" data-name="Path 57" />
+                <path d="M310.593 480.445h13.594" stroke-linejoin="round" stroke-linecap="round" stroke="#c1c1c1"
+                  fill="transparent" data-name="Path 58" />
+                <path d="m317.39 487.242-6.797-6.797" stroke-linejoin="round" stroke-linecap="round" stroke="#c1c1c1"
+                  fill="transparent" data-name="Path 59" />
+              </g>
+            </svg>
+          <li>
+            <a href="/templates/textpage.html">
+              ადმინისტრაცია
+
             </a>
-            <a href="/templates/aboutkeda.html">
-              <li class="nav-item">ქედის შესახებ</li>
+          </li>
+          <li>
+            <a href="/templates/textpage.html">საფინანსო სამსახური
             </a>
-            <a href="/templates/meria.html">
-              <li class="nav-item has-submenu">
-                მერია
-                <ul class="submenu">
-         
-  
-                    <li>
-                      <a href="">
-  
-                        მერიის შესახებ
-                      </a>
-                    
-                    </li>
-                    <li><a href="">
-                      სიახლეები
-                    </a></li>
-                    <li><a href="">
-                      განცხადებები
-                    </a></li>
-                    <li><a href="">
-                      მერი
-  
-                    </a></li>
-                    <li><a href="">
-                      მერის მოადგილეები
-  
-                    </a></li>
-              
-            
-  
-                  <li class="has-expanded-submenu">
-                    <p>სამსახურები 
-  
-                      <img src="images/arrow-right.png" alt="" >
-                    </p>
-                    <ul class="expanded-submenu">
+          </li>
+          <li>
+            <a href="/templates/textpage.html">ეკონომიკური განვითარების სამსახური
+            </a>
+          </li>
+          <li>
+            <a href="/templates/textpage.html">სივრცითი მოწყობის, არქიტექტურისა და მშენებლობის სამსახური
+            </a>
+          </li>
+          <li>
+            <a href="/templates/textpage.html">ზედამხედველობის სამსახური
+            </a>
+          </li>
+          <li>
+            <a href="/templates/textpage.html">განათლების, კულტურის, სპორტის, ტურიზმის, ახალგაზრდულ საკითხთა და ძეგლთა დაცვის სამსახური
+            </a>
+          </li>
+          <li>
+            <a href="/templates/textpage.html">ჯანმრთელობისა და სოციალური დაცვის სამსახური
+            </a>
+          </li>
+          <li>
+            <a href="/templates/textpage.html">შიდა აუდიტის სამსახური
+            </a>
+          </li>
+          <li>
+            <a href="/templates/textpage.html">სამხედრო აღრიცხვის, გაწვევისა და მობილიზაციის სამსახური
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="navigation">
+    <nav class="navbar">
+      <ul class="nav-list">
+        <a href="/">
+          <li class="nav-item">მთავარი</li>
+        </a>
+        <a href="/templates/gallery.html">
+          <li class="nav-item">ქედის შესახებ</li>
+        </a>
+
+        <li class="nav-item has-submenu">
+          <a href="/templates/projects.html"> მერია </a>
+          <ul class="submenu">
             <li>
-              <a href="">
-                ადმინისტრაცია
-  
+              <a href="/templates/textpage.html">
+
+                მერიის შესახებ
               </a>
+
             </li>
-            <li>
-              <a href="/templates/textpage.html">საფინანსო სამსახური
-              </a>
-            </li>
-            <li>
-              <a href="/templates/textpage.html">ეკონომიკური განვითარების სამსახური
-              </a>
-            </li>
-            <li>
-              <a href="/templates/textpage.html">სივრცითი მოწყობის, არქიტექტურისა და მშენებლობის სამსახური
-              </a>
-            </li>
-            <li>
-              <a href="/templates/textpage.html">ზედამხედველობის სამსახური
-              </a>
-            </li>
-            <li>
-              <a href="/templates/textpage.html">განათლების, კულტურის, სპორტის, ტურიზმის, ახალგაზრდულ საკითხთა და ძეგლთა დაცვის სამსახური
-              </a>
-            </li>
-            <li>
-              <a href="/templates/textpage.html">ჯანმრთელობისა და სოციალური დაცვის სამსახური
-              </a>
-            </li>
-            <li>
-              <a href="/templates/textpage.html">შიდა აუდიტის სამსახური
-              </a>
-            </li>
-            <li>
-              <a href="/templates/textpage.html">სამხედრო აღრიცხვის, გაწვევისა და მობილიზაციის სამსახური
-              </a>
-            </li>
-                    </ul>
-                  </li>
-                  <a href="">
-  
-                    <li>მერის წარმომადგენლები</li>
+            <li><a href="/templates/merianews.html">
+                სიახლეები
+              </a></li>
+            <li><a href="/templates/gancxadebebiMeria.html">
+                განცხადებები
+              </a></li>
+            <li><a href="/templates/textpage.html">
+                მერი
+
+              </a></li>
+            <li><a href="/templates/textpage.html">
+                მერის მოადგილეები
+
+              </a></li>
+
+
+
+            <li class="has-expanded-submenu">
+              <p>სამსახურები
+
+                <img src="../images/arrow-right.png" alt="">
+              </p>
+              <ul class="expanded-submenu">
+                <li>
+                  <a href="/templates/textpage.html">
+                    ადმინისტრაცია
+
                   </a>
-                  <li>
-                    <a href="">მუნიციპალური
-                    </a>
-                  </li>
-                  <li>
-                    <a href="">ორგანიზაციები
-                    </a>
-                  </li>
-                  <li>
-                    <a href="">სტრუქტურული ხე
-                    </a>
-                  </li>
-                  <li>
-                    <a href="">მემორანდუმები
-                    </a>
-                  </li>
-                  <li>
-                    <a href="">აუქციონები
-                    </a>
-                  </li>
-                  <li>
-                    <a href="">ტენდერები
-  
-                    </a>
-                  </li>
-            
-                </ul>
-              </li>
+                </li>
+                <li>
+                  <a href="">საფინანსო სამსახური
+                  </a>
+                </li>
+                <li>
+                  <a href="/templates/textpage.html">ეკონომიკური განვითარების სამსახური
+                  </a>
+                </li>
+                <li>
+                  <a href="/templates/textpage.html">სივრცითი მოწყობის, არქიტექტურისა და მშენებლობის სამსახური
+                  </a>
+                </li>
+                <li>
+                  <a href="/templates/textpage.html">ზედამხედველობის სამსახური
+                  </a>
+                </li>
+                <li>
+                  <a href="/templates/textpage.html">განათლების, კულტურის, სპორტის, ტურიზმის, ახალგაზრდულ საკითხთა და
+                    ძეგლთა დაცვის სამსახური
+                  </a>
+                </li>
+                <li>
+                  <a href="/templates/textpage.html">ჯანმრთელობისა და სოციალური დაცვის სამსახური
+                  </a>
+                </li>
+                <li>
+                  <a href="/templates/textpage.html">შიდა აუდიტის სამსახური
+                  </a>
+                </li>
+                <li>
+                  <a href="/templates/textpage.html">სამხედრო აღრიცხვის, გაწვევისა და მობილიზაციის სამსახური
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <a href="/templates/textpage.html">
+
+              <li>მერის წარმომადგენლები</li>
             </a>
-            <a href="/templates/sakrebulo.html">
-              <li class="nav-item" data-submenu="submenu4">საკრებულო</li>
-            </a>
-            <a href="/templates/forcitizens.html">
-              <li class="nav-item" data-submenu="submenu5">მოქალაქისთვის</li>
-            </a>
-            <a href="/templates/publicinfo.html">
-              <li class="nav-item" data-submenu="submenu6">საჯარო ინფორმაცია</li>
-            </a>
-            <a href="/templates/services.html">
-              <li class="nav-item" data-submenu="submenu7">სერვისები</li>
-            </a>
-            <a href="/templates/contacts.html">
-              <li class="nav-item" data-submenu="submenu8">კონტაქტი</li>
-            </a>
+            <li>
+              <a href="/templates/textpage.html">მუნიციპალური
+              </a>
+            </li>
+            <li>
+              <a href="/templates/textpage.html">ორგანიზაციები
+              </a>
+            </li>
+            <li>
+              <a href="/templates/textpage.html">სტრუქტურული ხე
+              </a>
+            </li>
+            <li>
+              <a href="/templates/textpage.html">მემორანდუმები
+              </a>
+            </li>
+            <li>
+              <a href="/templates/textpage.html">აუქციონები
+              </a>
+            </li>
+            <li>
+              <a href="/templates/textpage.html">ტენდერები
+
+              </a>
+            </li>
+
           </ul>
-        </nav>
-      </div>
+        </li>
+
+        <a href="/templates/projects.html">
+          <li class="nav-item" >საკრებულო</li>
+        </a>
+        <a href="/templates/textpage.html">
+          <li class="nav-item" data-submenu="submenu5">მოქალაქისთვის</li>
+        </a>
+        <a href="/templates/textpage.html">
+          <li class="nav-item" data-submenu="submenu6">საჯარო ინფორმაცია</li>
+        </a>
+        <a href="/templates/aboutkeda.html">
+          <li class="nav-item" data-submenu="submenu7">სერვისები</li>
+        </a>
+        <a href="/templates/contacts.html">
+          <li class="nav-item" data-submenu="submenu8">კონტაქტი</li>
+        </a>
+      </ul>
+    </nav>
+  </div>
       <div class="helper-nav">
         <a>მთავარი</a>
         <a><img src="../images/arrow-right.png" alt="">  მოქალაქეებისთვის </a>

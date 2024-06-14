@@ -21,6 +21,7 @@ const bullets = document.querySelectorAll('.bullet');
 const slides = document.querySelectorAll('.slide');
 
 let currentSlide = 0;
+let autoSlideInterval;
 
 function showSlide(n) {
     slides[currentSlide].classList.remove('active');
@@ -42,18 +43,36 @@ function goToSlide(n) {
     showSlide(n);
 }
 
-if(nextButton && prevButton){
+if (nextButton && prevButton) {
+    nextButton.addEventListener('click', () => {
+        nextSlide();
+        resetAutoSlide();
+    });
+    prevButton.addEventListener('click', () => {
+        prevSlide();
+        resetAutoSlide();
+    });
 
-    nextButton.addEventListener('click', nextSlide);
-    prevButton.addEventListener('click', prevSlide);
-    
     bullets.forEach((bullet, index) => {
         bullet.addEventListener('click', () => {
             goToSlide(index);
+            resetAutoSlide();
         });
     });
 }
 
+// Auto-slide functionality
+function startAutoSlide() {
+    autoSlideInterval = setInterval(nextSlide, 6000); // Change slide every 3 seconds
+}
+
+function resetAutoSlide() {
+    clearInterval(autoSlideInterval);
+    startAutoSlide();
+}
+
+// Start auto-sliding when the page loads
+startAutoSlide();
 
 
 
@@ -166,10 +185,17 @@ hamburger.addEventListener('click',()=>{
     mobileNav.classList.toggle('toggle-nav')
  console.log('cl')
 })
+let isScrollDisabled = false;
 
 meriaExpandBtn.addEventListener('click',()=>{
     meriaExpandMenu.style.transform='translateX(0%)';
     meriaExpandMenu.style.zIndex = 10
+    if (isScrollDisabled) {
+        document.body.style.overflow = '';
+    } else {
+        document.body.style.overflow = 'hidden';
+    }
+    isScrollDisabled = !isScrollDisabled;
 })
 branchesExpandBtn.addEventListener('click',()=>{
     branchesExpandMenu.style.transform='translateX(0%)';

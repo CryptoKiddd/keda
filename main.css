@@ -1,5 +1,9 @@
 @font-face {
-  font-family: "haltvetica-geo-caps";
+  font-family: "font-caps";
+  src: url("fonts/helvetica-neue-lt-geo-65-medium-caps.ttf");
+}
+@font-face {
+  font-family: "font-55";
   src: url("fonts/helvetica-neue-lt-geo-55-roman.ttf");
 }
 
@@ -12,7 +16,7 @@ html {
 }
 
 * {
-  font-family: "haltvetica-geo-caps", sans-serif;
+  font-family: "font-55", sans-serif;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -21,7 +25,9 @@ img{
   width: 100%;
   height: 100%;
 }
-
+h1,h2{
+  font-family: "font-55";
+}
 a {
   text-decoration: none;
   color:#333333
@@ -277,7 +283,7 @@ a {
   position: absolute;
   bottom: 30px;
   left: 17%;
-  font-family: "Helvetica Neue LT GEO Caps";
+  font-family: "font-55";
   font-size: 30px;
 
   line-height: 34px;
@@ -287,23 +293,23 @@ a {
   max-width: 680px;
   width: 100%;
 }
-
 .slide {
   position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
   height: 100%;
-  opacity: 0;
-  transition: opacity 0.5s ease;
+  top: 0;
+  /* transform:translateX(100%); */
+  transition:  750ms ease-in-out; 
+  opacity:0;
 }
-
 .slide.active {
+  transform:translateX(0);
   opacity: 1;
 }
 .slide img {
   width: 100%;
   height: 100%;
+  object-fit: cover; 
 }
 
 .prev,
@@ -386,8 +392,12 @@ news section .////////////
   gap: 50px;
   padding: 55px 0px;
 }
-.news-left h2{
+.news-left h2,
+.announcments-container h2,
+
+{
   font-size: 30px;
+  font-family: 'font-caps';
   color: #333333;
 
 }
@@ -509,7 +519,7 @@ news section .////////////
 }
 .carousel-item-bottom{
   padding: 15px 17px;
-  font-family: "Helvetica Neue LT GEO";
+  font-family: "font-55";
 font-size: 14px;
 font-weight: normal;
 line-height: 18px;
@@ -955,7 +965,7 @@ z-index: 3;
   max-width: 1400px;
   width: 100%;
   margin: 50px auto;
-  font-family: "Helvetica Neue LT GEO Caps";
+  font-family: "font-caps";
 font-size: 30px;
 color:#333333;
 }
@@ -983,7 +993,7 @@ color:#333333;
   width: 100%;
   padding: 30px 0px;
   border: none;
-  background: #da251c;font-family: "Helvetica Neue LT GEO Caps";
+  background: #da251c;font-family: "font-caps";
   font-size: 18px;
   color: white;
   font-weight: 500;
@@ -1001,17 +1011,8 @@ color:#333333;
 }
 
 .public-info-container button:last-child{
-  max-width: 537px;
-  width: 100%;
-  padding: 30px 0px;
-  
   background: #00923f;
-  font-family: "Helvetica Neue LT GEO Caps";
-
-  font-size: 18px;
-  color: white;
-  font-weight: 500;
-  border-radius: 15px;
+ 
 }
 .public-info-container button:last-child:hover{
   border: 1px solid #00923f;
@@ -1911,36 +1912,39 @@ opacity: 0.7;}
   }
  
   .mobile-nav{
-    display: block;
-    left: -100%;
-    height: 100%;
+    display: flex;
+    margin-top:calc(100vh + 75px) ;
+transform: translateX(-500px);    
   
-    background:#8e8e8e;
-    z-index: 10000;
+    z-index: 1000;
     padding: 10px;
     overflow: hidden;
     list-style: none;
     position: absolute;
+    height: 100vh;
   width: 300px;
     transition: 300ms ease;
+    overflow: hidden;
+  }
+  .mbn-wrapper{
+    display: flex;
+    width: auto;
+
   }
   .main-mobile-nav{
     display: flex;
     flex-direction: column;
-    position: absolute;
-    width: 100%;
+    width: 300px;
     height: 100%;
-  
-    background:#C1C1C1;
-    top: 0%;
-    left:0;
-    transition: 300ms ease;
+    background:white;
+   
+    z-index: 100000;
+    transition: 1500ms ease;
   
 
   }
   .toggle-nav{
-    left: 0%;
-    
+transform: translateX(-20px);    
   }
   .main-mobile-nav li{
     width: 100%;
@@ -2006,5 +2010,118 @@ footer{
 }
 .bullets{
 padding-left: 50px;}
+
+}
+@media only screen and (max-width: 480px){
+.logo p{
+  display: none;
+}
+.container{
+  justify-content: space-between;
+  padding:0 ;
+
+  
+}
+
+h2{
+  font-size: 24px;
+}
+.topbar{
+  padding: 5px ;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: white;
+  -webkit-box-shadow: 0px 3px 12px -2px rgba(0,0,0,0.75);
+-moz-box-shadow: 0px 3px 12px -2px rgba(0,0,0,0.75);
+box-shadow: 0px 3px 12px -2px rgba(0,0,0,0.75);
+}
+.submenu-arrow{
+  width: 12px;
+  height: 12px;
+  margin-left: 20px;
+}
+.searchbar{
+  margin-right: 15px;
+}
+.announcments-wrapper aside{
+  width: 100%;
+}
+.citizens-container{
+  grid-template-columns: 60% 40%;
+}
+.citizens-left h2{
+  font-size: 24px;
+}
+.citizens-left h5{
+  font-size: 12px;
+}
+.service{
+  width: 200px;
+}
+.citizens-left-item{
+  padding: 21px 25px;
+
+}
+.citizens-left-item img{
+  width: 25px;
+  height: 25px;
+}
+.citizens-left{
+  display: flex;
+  flex-direction: column;
+justify-content: space-between;
+font-size: 12px;
+}
+.citizens-right-item span{
+  width: 95%;
+  font-size: 12px;
+}
+.public-section-divider{
+  font-size: 24px;
+}
+.carousel-item-bottom{
+  font-size: 13px;
+  padding: 15px 7px;
+}
+.hero-carousel aside {
+  left: 2%;
+  font-size: 20px;
+}
+.innerpage-main-bottom{
+  flex-direction: column;
+  padding: 10px;
+}
+.innerpage-main-left{
+  min-width: 0;
+}
+.news-right-innerpages{
+  display: none;
+}
+.innerpage-sakrebulo-news-item-right h4{
+  font-size: 13px;
+}
+.innerpage-sakrebulo-news-item-right p{
+  font-size: 12px;
+  margin: 20px 0 18px 0;
+  ;
+}
+.contacts-page-item{
+  padding-left: 10px;
+  font-size: 12px;
+}
+.cp-h{
+  margin-left: 0;
+  font-size: 16px;
+}
+.cp-h span{
+  font-size: 12px;
+}
+.innerpage-main-gallery{
+  align-items: center;
+  justify-content: center;
+}
+
+
 
 }
