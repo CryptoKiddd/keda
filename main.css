@@ -1942,7 +1942,7 @@ opacity: 0.7;}
  
   .mobile-nav{
     display: flex;
-    margin-top:calc(100vh + 75px) ;
+    margin-top:calc(130vh + 75px) ;
 transform: translateX(-500px);    
   
     z-index: 1000;
@@ -1950,7 +1950,7 @@ transform: translateX(-500px);
     overflow: hidden;
     list-style: none;
     position: absolute;
-    height: 100vh;
+    height: 130vh;
   width: 300px;
     transition: 300ms ease;
     overflow: hidden;
@@ -2165,5 +2165,23 @@ font-size: 12px;
 }
 
 
+
+}
+@media only screen and (max-width: 420px){
+.news-container{
+  max-width: 100%;
+}
+.carousel{
+  gap: 10px;
+}
+.carousel-item {
+  min-width: calc((100% / 2) - 9.9px);
+}
+.carousel-item-bottom{
+  padding: 5px 7px;
+}
+.citizens-left h2 {
+  font-size: 20px;
+}
 
 }
