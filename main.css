@@ -1721,6 +1721,9 @@ margin: 50px 0px;
   color: rgba(255, 255, 255, 0.407);
   
 }
+.scroll-lock{
+  overflow: hidden;
+}
 
 .contacts-form input::placeholder,
 .contacts-form textarea::placeholder
@@ -1942,7 +1945,7 @@ opacity: 0.7;}
  
   .mobile-nav{
     display: flex;
-    margin-top:calc(130vh + 75px) ;
+    margin-top:calc(120vh + 75px) ;
 transform: translateX(-500px);    
   
     z-index: 1000;
@@ -1950,7 +1953,7 @@ transform: translateX(-500px);
     overflow: hidden;
     list-style: none;
     position: absolute;
-    height: 130vh;
+    height: 120vh;
   width: 300px;
     transition: 300ms ease;
     overflow: hidden;

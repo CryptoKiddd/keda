@@ -8,19 +8,7 @@ const closeMeria = document.querySelector('.meria-nav-prev')
 const closeBranches = document.querySelector('.branches-nav-prev')
 
 
-document.addEventListener('DOMContentLoaded', function() {
-    const currentLocation = window.location.href;
-    console.log(currentLocation)
 
-    const navItems = document.querySelectorAll('.nav-item');
-  
-    navItems.forEach(item => {
-        console.log(this.parentElement)
-        if (this.parentElement.getAttribute('href') === currentLocation || item.firstElementChild.getAttribute('href') === currentLocation) {
-            this.classList.add('active-nav');
-        }
-    });
-});
 
 
 if(window.innerWidth < 980){
@@ -28,6 +16,7 @@ if(window.innerWidth < 980){
     hamburger.addEventListener('click',()=>{
         hamburger.classList.toggle('open')
         mobileNav.classList.toggle('toggle-nav')
+        document.body.classList.toggle('scroll-lock');
     })
 
 
