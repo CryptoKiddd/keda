@@ -170,44 +170,6 @@ carousels.forEach(id => new Carousel(id));
 
 
 
-const hamburger = document.querySelector('#hamburger')
-const mobileNav = document.querySelector('.mobile-nav')
-const meriaExpandBtn = document.querySelector('#meria-expand-btn')
-const branchesExpandBtn = document.querySelector('#branches-expand-btn')
-const meriaExpandMenu = document.querySelector('#meria-expand-menu')
-const branchesExpandMenu = document.querySelector('#branches-expand-menu')
-const closeMeria = document.querySelector('.meria-nav-prev')
-const closeBranches = document.querySelector('.branches-nav-prev')
 
 
-hamburger.addEventListener('click',()=>{
-    hamburger.classList.toggle('open')
-    mobileNav.classList.toggle('toggle-nav')
- console.log('cl')
-})
-let isScrollDisabled = false;
 
-meriaExpandBtn.addEventListener('click',()=>{
-    meriaExpandMenu.style.transform='translateX(0%)';
-    meriaExpandMenu.style.zIndex = 10
-    if (isScrollDisabled) {
-        document.body.style.overflow = '';
-    } else {
-        document.body.style.overflow = 'hidden';
-    }
-    isScrollDisabled = !isScrollDisabled;
-})
-branchesExpandBtn.addEventListener('click',()=>{
-    branchesExpandMenu.style.transform='translateX(0%)';
-    branchesExpandMenu.style.zIndex = 11
-})
-
-closeMeria.addEventListener('click',()=>{
-    meriaExpandMenu.style.transform='translateX(-110%)';
-
-})
-
-closeBranches.addEventListener('click',()=>{
-    branchesExpandMenu.style.transform='translateX(110%)';
-
-})
