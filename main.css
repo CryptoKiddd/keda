@@ -74,16 +74,26 @@ a {
 .searchbar img{
   padding-right: 13px;
   border-right: 1px solid #E2E2E2;
+  transition: 250ms ease;
+  cursor: pointer;
+
+  opacity: 0.7;
 }
+.searchbar img:hover{
+  
+  opacity:1;
+}
+
 .searchbar span{
   height:20px ;
   width: 20px;
   cursor: pointer;
+  font: "font-caps";
   transition: 250ms ease;
+  opacity: 0.7;
 }
 .searchbar span:hover{
- margin-left: 10px;
- scale: 1.05;
+ opacity: 1;
 }
 
 .navigation {
@@ -93,9 +103,9 @@ a {
   width: 100%;
   background-color: #f1f1f1;
   transition: 750ms ease;
-  -webkit-box-shadow: 0px 8px 11px -3px rgba(0,0,0,0.75);
-  -moz-box-shadow: 0px 8px 11px -3px rgba(0,0,0,0.75);
-  box-shadow: 0px 8px 11px -3px rgba(0,0,0,0.75);
+  -webkit-box-shadow: 0px 2px 10px 0px rgb(52, 51, 51);
+-moz-box-shadow:0px 2px 10px 0px rgb(52, 51, 51);
+box-shadow: 0px 1px 10px 0px rgb(193, 191, 191);
 
   /* position: sticky;
   left: 0; */
@@ -165,11 +175,11 @@ a {
   margin: 0;
   padding: 0;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
 }
 
 .nav-item {
-  padding: 20px 40px 17px 16px;
+  padding: 20px 40px 17px 26px;
   color: black;
   text-align: center;
   cursor: pointer;
@@ -177,9 +187,7 @@ a {
   border-left: 1px solid #e2e2e2;
   font-size: 14px;
 }
-.nav-item:last-child {
-  border-right: 1px solid #e2e2e2;
-}
+
 
 .nav-item:hover {
   background-color: white;
@@ -296,6 +304,7 @@ a {
   left: 17%;
   font-family: "font-55";
   font-size: 30px;
+  font-weight: thin;
 
   line-height: 34px;
 
@@ -506,6 +515,7 @@ news section .////////////
 }
 .carousel-btns a{
   color: #8E8E8E;
+  text-decoration: underline;
 }
 
 .carousel-item:hover .carousel-item-top::before{
@@ -560,6 +570,7 @@ color: #8e8e8e;
   gap: 26px;
   padding-top: 26px;
   color: #333333;
+  border-top:2px solid #F2F2F2;
 
   z-index: 2;
 }
@@ -578,12 +589,18 @@ color: #8e8e8e;
   padding: 14px;
   display: flex;align-items: center;
   gap: 7px;
-  border: 1px solid #F2F2F2;
-  border-radius: 10px;
+  border: 10px;
   height: 40px;
   color: #333333;
-
-  box-shadow: 0px 5px 4.5px rgba(0, 0, 0, 0.03);
+  font: 'font-55';
+  -webkit-box-shadow:0px 4px 5px 1px rgba(242,242,242,1);
+  -moz-box-shadow: 0px 4px 5px 1px rgba(242,242,242,1);
+  box-shadow: 0px 4px 5px 1px rgba(242,242,242,1);
+  border-radius: 10px;
+  transition: 250ms;
+}
+.news-right a:hover{
+  color: #00923F;
 }
 .news-right a img{
   box-sizing: content-box;
@@ -594,6 +611,10 @@ color: #8e8e8e;
   height: 274px;
   max-width: 256px;
   width: 100%;
+  -webkit-box-shadow:0px 4px 5px 1px rgba(242,242,242,1);
+  -moz-box-shadow: 0px 4px 5px 1px rgba(242,242,242,1);
+  box-shadow: 0px 4px 5px 1px rgba(242,242,242,1);
+  border-radius: 10px;
 }
 
 .survey {
@@ -601,7 +622,11 @@ color: #8e8e8e;
   width: 100%;
   display: flex;
   flex-direction: column;
-  
+  -webkit-box-shadow:0px 4px 5px 1px rgba(242,242,242,1);
+-moz-box-shadow: 0px 4px 5px 1px rgba(242,242,242,1);
+box-shadow: 0px 4px 5px 1px rgba(242,242,242,1);
+border-radius: 10px;
+
   padding: 10px;
   gap: 9px;
 }
@@ -809,6 +834,7 @@ margin-bottom:13px;
   color: #333333;
   margin-right: 25px;
   transition: 250ms ease;
+  text-decoration: underline;
 
 }
 .announcment-btns a:hover{
@@ -855,6 +881,7 @@ font-size: 18px;
 font-size: 14px;
 display: flex;
 align-items: center;
+text-decoration: underline;
 transition: 300ms ease;
 
 
@@ -1074,6 +1101,10 @@ color:#333333;
   border:2px solid white;
 
 }
+.service-more  a {
+text-decoration: underline;
+
+}
 
 .servicesvg{
   box-sizing: content-box;
@@ -1217,7 +1248,16 @@ ABOUT KEDA PAGE
   color: #E2E2E2;
   font-size: 12px;
   cursor: pointer;
+  text-decoration: underline;
+  font-family: "font-caps";
+  transition: 350ms ease;
   
+}
+.helper-nav a:last-child{
+  color: #333333;
+}
+.helper-nav a:hover{
+  color: #333333;
 }
 .helper-nav img{
   width: 5px;
@@ -1304,6 +1344,7 @@ ABOUT KEDA PAGE
 .innerpage-main-left-item span {
   padding-left: 30px;
   border-left: 1px solid #C1C1C1;
+  font-family: 'font-55';
   height: 43px;
   display: grid;
   place-items: center;
@@ -1429,12 +1470,14 @@ opacity: 0.8;}
 .innerpage-sakrebulo-news-item-right h4 {
   color: #8E8E8E;
   font-size: 16px;
+  font-family: 'font-caps';
+  font-weight: normal;
 
 }
 .innerpage-sakrebulo-news-item-right p {
   color: #C1C1C1;
   font-size: 14px;
-  margin: 40px 0 20px 0;
+  margin: 35px 0 25px 0;
   
 
 }
@@ -1443,6 +1486,7 @@ opacity: 0.8;}
   font-size: 14px;
   display: flex;align-items: center;
   transition: 250ms ease;
+  text-decoration: underline;
  
   
 

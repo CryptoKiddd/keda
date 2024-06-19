@@ -60,16 +60,18 @@ let topbar = document.querySelector('.topbar')
 
 window.addEventListener('scroll',()=>{
 
-    if (window.pageYOffset > 0) {
+    if (window.pageYOffset > 128) {
 
 
         nav.style.position='fixed'
-        nav.style.top='127px'
+        nav.style.top='0'
+        nav.style.zIndex='127'
+        nav.style.transition='250ms ease'
       
-         nav.style.zIndex='100'
-        topbar.style.position='sticky'
-        topbar.style.top='0'
-        topbar.style.zIndex='100'
+        
+    }else{
+        nav.style.position='relative'
+
     }
 })
 
