@@ -19,9 +19,12 @@ const prevButton = document.querySelector('.prev');
 const nextButton = document.querySelector('.next');
 const bullets = document.querySelectorAll('.bullet');
 const slides = document.querySelectorAll('.slide');
+const carousel = document.querySelector('.hero-carousel'); // Select your carousel container
 
 let currentSlide = 0;
 let autoSlideInterval;
+let startX;
+let dragging = false;
 
 function showSlide(n) {
     slides[currentSlide].classList.remove('active');
@@ -63,7 +66,7 @@ if (nextButton && prevButton) {
 
 // Auto-slide functionality
 function startAutoSlide() {
-    autoSlideInterval = setInterval(nextSlide, 6000); // Change slide every 3 seconds
+    autoSlideInterval = setInterval(nextSlide, 6000); // Change slide every 6 seconds
 }
 
 function resetAutoSlide() {
@@ -71,8 +74,37 @@ function resetAutoSlide() {
     startAutoSlide();
 }
 
+// Mouse drag functionality
+carousel.addEventListener('mousedown', (e) => {
+    startX = e.clientX;
+    dragging = true;
+});
+
+carousel.addEventListener('mousemove', (e) => {
+    if (dragging) {
+        const currentX = e.clientX;
+        const diffX = startX - currentX;
+
+        // Adjust sensitivity as needed (e.g., 50 pixels threshold)
+        if (Math.abs(diffX) > 50) {
+            if (diffX > 0) {
+                nextSlide();
+            } else {
+                prevSlide();
+            }
+            resetAutoSlide();
+            dragging = false;
+        }
+    }
+});
+
+carousel.addEventListener('mouseup', () => {
+    dragging = false;
+});
+
 // Start auto-sliding when the page loads
 startAutoSlide();
+
 
 
 

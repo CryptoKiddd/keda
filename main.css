@@ -1,6 +1,6 @@
 @font-face {
   font-family: "font-caps";
-  src: url("fonts/helvetica-neue-lt-geo-65-medium-caps.ttf");
+  src: url("fonts/helvetica-neue-lt-geo-55-roman-caps.ttf")
 }
 @font-face {
   font-family: "font-55";
@@ -55,9 +55,14 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
+  font-family: "font-caps";
 
 
   gap: 20px;
+}
+.logo p{
+  font-family: "font-55";
+
 }
 .logo img {
   width: 65px;
@@ -103,9 +108,8 @@ a {
   width: 100%;
   background-color: #f1f1f1;
   transition: 750ms ease;
-  -webkit-box-shadow: 0px 2px 10px 0px rgb(52, 51, 51);
--moz-box-shadow:0px 2px 10px 0px rgb(52, 51, 51);
-box-shadow: 0px 1px 10px 0px rgb(193, 191, 191);
+
+box-shadow: 0px 5px 10px 0px rgba(165, 163, 163, 0.462);
 
   /* position: sticky;
   left: 0; */
@@ -176,22 +180,29 @@ box-shadow: 0px 1px 10px 0px rgb(193, 191, 191);
   padding: 0;
   display: flex;
   justify-content: space-between;
+  height: 100%;
+  align-items: center;
 }
+.nav-list > * {height: 100%;
+  border-left: 1px solid #E2E2E2;
+  padding-left: 20px;
+  padding-right: 70px;
+  box-sizing: content-box;
+
+display: flex;justify-content: center;align-items: center;}
+
 
 .nav-item {
-  padding: 20px 40px 17px 26px;
+  /* padding: 21px 65px 17px 26px; */
   color: black;
   text-align: center;
+  
   cursor: pointer;
   position: relative;
-  border-left: 1px solid #e2e2e2;
+  font-family: "font-55";
   font-size: 14px;
 }
 
-
-.nav-item:hover {
-  background-color: white;
-}
 .has-submenu{
     position: relative;
 }
@@ -297,6 +308,7 @@ box-shadow: 0px 1px 10px 0px rgb(193, 191, 191);
   overflow: hidden;
   transition: opacity 0.5s ease;
   position: relative;
+  cursor: pointer;
 }
 .hero-carousel aside {
   position: absolute;
@@ -330,6 +342,7 @@ box-shadow: 0px 1px 10px 0px rgb(193, 191, 191);
   width: 100%;
   height: 100%;
   object-fit: cover; 
+  -webkit-user-drag: none;
 }
 
 .prev,
@@ -967,10 +980,11 @@ height: 35px;
   height: 100%;
   border-radius: 10px;
   transition: 350ms ease;
+  scale: 1.2;
 
 }
 .citizens-right-item:hover img{
-  scale: 1.2;
+  scale: 1.3;
   opacity: 0.8;
   }
  
@@ -1093,6 +1107,10 @@ color:#333333;
 }
 .service:hover{
   color: #333333;
+}
+.service:hover .servicesvg{
+  border-color: #333333;
+  
 }
 
 .service-more  {
@@ -1326,6 +1344,7 @@ ABOUT KEDA PAGE
   border-radius: 10px;
   gap: 30px;
   transition: 250ms ease-out;
+  overflow: hidden;
 
   
 }
@@ -1338,6 +1357,7 @@ ABOUT KEDA PAGE
 .innerpage-main-left p{
   font-size: 14px;
   color: #8e8e8e;
+  margin-top: 9px;
 
 
 }
@@ -1383,6 +1403,8 @@ ABOUT KEDA PAGE
   width: 100%;
   height: 100%;
   border-radius: 10px;
+  transition: 350ms ease;
+  z-index: -1;
 }
 .innerpage-sakrebulo-news-item{
   display: flex;
@@ -1394,7 +1416,14 @@ ABOUT KEDA PAGE
   height: 200px;
   margin-bottom: 44px;
   padding-bottom: 44px;
+  cursor: pointer;
   border-bottom: 1px solid #E2E2E2;
+}
+.innerpage-sakrebulo-news-item:hover .innerpage-sakrebulo-news-item-left p {
+  color: white;
+}
+.innerpage-sakrebulo-news-item:hover .innerpage-sakrebulo-news-item-left img {
+  scale: 1.05;
 }
 
 .innerpage-main-gallery{
@@ -1404,27 +1433,22 @@ ABOUT KEDA PAGE
   flex-direction: row;
   flex-wrap: wrap;
   gap: 20px;
-  row-gap: 10px;
-  overflow-x: auto;
+  row-gap: 50px;
   
 }
 .innerpage-gallery-item{
   max-width: 320px;
   width: 100%;
-  gap: 7px;
+ 
   flex-direction: column;
   border: none;
   cursor: pointer;
+  
   transition: 250ms ease;
 }
-.innerpage-gallery-item:hover{
-  max-width: 320px;
-  width: 100%;
-  gap: 7px;
-  flex-direction: column;
-  border: none;
-  cursor: pointer;
-  scale: 1.01;
+.innerpage-gallery-item:hover .innerpage-sakrebulo-news-item-left img{
+ 
+   scale: 1.05;
 }
 
 
@@ -1432,11 +1456,14 @@ ABOUT KEDA PAGE
   width: 260px;
   height: 190px;
   position: relative;
+  overflow: hidden;
+  border-radius: 10px;
   
 
 }
 .innerpage-gallery-item-top{
   width: 100%;
+  overflow: hidden;
 }
 .innerpage-sakrebulo-news-item-left header {
   width: 100%;
@@ -1456,6 +1483,7 @@ ABOUT KEDA PAGE
   text-align: center;
   color: white;
   gap: 5px;
+  z-index: 10;
 
 }
 .innerpage-sakrebulo-news-item-right{
@@ -1494,6 +1522,15 @@ opacity: 0.8;}
 .innerpage-sakrebulo-news-item-right a:hover{
   margin-left: 10px;
   color: #333;
+}
+.innerpage-sakrebulo-news-item:hover .innerpage-sakrebulo-news-item-right h4{
+  color: #333333;
+}
+.innerpage-sakrebulo-news-item:hover .innerpage-sakrebulo-news-item-right p{
+  color: #333333;
+}
+.innerpage-sakrebulo-news-item:hover .innerpage-sakrebulo-news-item-right a{
+  color: #333333;
 }
 
 .innerpage-proj-header{
@@ -1765,6 +1802,12 @@ margin: 50px 0px;
   color: rgba(255, 255, 255, 0.407);
   
 }
+.contacts-form input:focus,
+.statement-form input:focus{
+  border: 1px solid #3333;
+  color: #333333;
+  
+}
 .scroll-lock{
   overflow: hidden;
 }
@@ -1817,8 +1860,22 @@ opacity: 0.7;}
 
 
 }
-
-
+.single-gallery-main{
+  align-items: start;
+}
+.single-gallery-bottom{
+  padding-inline: 70px;
+  max-width: 800px;
+}
+.innerpage-main-bottom{
+  z-index: 2;
+}
+.contacts-map{
+  margin-top: -200px;
+}
+.nav-list > a:hover{
+  background: white;
+}
 
 @media only screen and (max-width: 1500px){
   .navbar,
@@ -1870,11 +1927,14 @@ opacity: 0.7;}
     .announcment{
       max-width:97%
     }
+    .nav-list > *{
+      padding-right: 43px;
+    }
 
 }
 
 @media only screen and (max-width: 1210px){
-  .navbar,
+.navbar
   .news-container,
   .announcments-container,
   .citizens-container,
@@ -1920,13 +1980,17 @@ opacity: 0.7;}
   }
   .gallery-inner-page{
     max-width: 800px;
+    justify-content: center;
+  }
+  .nav-list > *{
+    padding-right: 33px;
+    padding-left: 13px;
   }
 
 
 
 }
 @media only screen and (max-width: 1070px){
-  .navbar,
   .news-container,
   .announcments-container,
   .citizens-container,
@@ -1942,10 +2006,7 @@ opacity: 0.7;}
   .news-container{
     max-width: 95%;
   }
-  .navigation,.navbar{
-    width: 100%;
-    justify-content: center;
-  }
+ 
   .news-right{
     padding-inline:5px
   }
@@ -1960,9 +2021,18 @@ opacity: 0.7;}
   .nav-list a{
     border: none;
   }
-  .nav-list{
-    justify-content: center;
-    
+ 
+  .single-gallery-bottom{
+    max-width: 700px;
+    padding: 0px;
+  }
+  .single-gallery-main{
+    align-items: center;
+  }
+  .nav-list > *{
+   padding: 0;
+   padding-right: 10px;
+   padding-left: 5px;
   }
 
 
@@ -2057,6 +2127,10 @@ transform: translateX(-20px);
   width: 100%;
 }
 
+.innerpage-sakrebulo-news-item-right p {
+  margin: 25px 0 15px 0;
+  
+}
  
   
 

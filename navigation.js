@@ -86,3 +86,4 @@ if(window.innerWidth <= 980){
     mobileParent.appendChild(child)
     child.style.position="relative"
 }
+

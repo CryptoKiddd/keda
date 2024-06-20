@@ -42,6 +42,7 @@ images.forEach((img,idx)=>{
     }
     if(idx % 9 === 0){
         item.classList.add('wide')
+        item.classList.add('portrait')
     }
     if(idx % 7 === 0){
         item.classList.add('portrait')
