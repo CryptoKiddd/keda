@@ -1,15 +1,3 @@
-const lang = document.getElementById('lang')
-
-lang.addEventListener('click', function () {
-    if (this.textContent === "eng") {
-        this.textContent = "ქარ"
-        return
-
-    }
-    this.textContent = "eng"
-
-
-})
 
 
 
@@ -103,3 +91,15 @@ if(window.innerWidth <= 980){
     child.style.position="relative"
 }
 
+const lang2 = document.getElementById('lang')
+
+lang2.addEventListener('click', function () {
+    if (this.textContent === "eng") {
+        this.textContent = "ქარ"
+        return
+
+    }
+    this.textContent = "eng"
+
+
+})
