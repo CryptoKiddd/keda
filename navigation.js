@@ -16,7 +16,7 @@ if(window.innerWidth < 980){
     hamburger.addEventListener('click',()=>{
         hamburger.classList.toggle('open')
         mobileNav.classList.toggle('toggle-nav')
-        document.body.classList.toggle('scroll-lock');
+        // document.body.classList.toggle('scroll-lock');
     })
 
 
