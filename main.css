@@ -135,7 +135,7 @@ a {
   opacity:1;
 }
 
-.searchbar span{
+.searchbar a{
   height:20px ;
   width: 20px;
   cursor: pointer;
@@ -145,7 +145,7 @@ a {
   transition: 250ms ease;
   opacity: 0.7;
 }
-.searchbar span:hover{
+.searchbar a:hover{
  opacity: 1;
 }
 
@@ -3136,4 +3136,8 @@ footer{
 .contacts-form textarea:focus{
   outline: #333;
 
+}
+.service span,
+.innerpage-main-left p{
+  font-family:'font-caps';
 }

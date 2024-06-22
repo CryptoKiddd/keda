@@ -1,3 +1,19 @@
+const lang = document.getElementById('lang')
+
+lang.addEventListener('click', function () {
+    if (this.textContent === "eng") {
+        this.textContent = "ქარ"
+        return
+
+    }
+    this.textContent = "eng"
+
+
+})
+
+
+
+
 const hamburger = document.querySelector('#hamburger')
 const mobileNav = document.querySelector('.mobile-nav')
 const meriaExpandBtn = document.querySelector('#meria-expand-btn')
