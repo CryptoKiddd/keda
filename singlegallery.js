@@ -38,21 +38,25 @@ prev.addEventListener('click',()=>{
 images.forEach((img,idx)=>{
     const item = document.createElement('div')
     if(idx % 2 === 0){
-        item.classList.add('portrait')
+        item.classList.add('small')
     }
-    if(idx % 9 === 0){
-        item.classList.add('wide')
-        item.classList.add('portrait')
+    if(idx % 5 === 0){
+        item.classList.add('medium')
+   
     }
-    if(idx % 7 === 0){
-        item.classList.add('portrait')
+    if(idx % 6 === 0){
+        item.classList.add('big')
     }
  
     item.classList.add('gallery-image')
     const gridImage = document.createElement('img')
-
+  
     gridImage.src=img
     gridImage.classList.add('gi')
     item.appendChild(gridImage)
     container.appendChild(item)
+    gridImage.addEventListener('click',()=>{
+        mainImage.src=img
+
+    })
 })

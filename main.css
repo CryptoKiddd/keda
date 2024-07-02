@@ -34,8 +34,10 @@ img{
 }
 h1,h2{
   font-family: "font-caps";
+  font-weight: 200;
 
 }
+
 .citizens-left h5{
   font-family: 'font-caps';
 }
@@ -2423,16 +2425,10 @@ opacity: 0.7;}
 
 
 }
-.single-gallery-main{
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: start;
-}
+
 .single-gallery-bottom{
- 
-  max-width: 800px;
-  margin-left: 150px;
-  padding-inline: 0;
+
+  padding-inline: 120px;
 
 }
 .innerpage-main-bottom{
@@ -2445,76 +2441,9 @@ opacity: 0.7;}
   background: white;
 }
 
-@media only screen and (max-width: 1881px){
 
 
-}
-@media only screen and (max-width: 1671px){
 
-
-}
-@media only screen and (max-width: 1571px){
- 
-
-}
-@media only screen and (max-width: 1388px){
-
-  .single-gallery-bottom{
-    margin-left: 50px;
-  }
-
-}
-@media only screen and (max-width: 1285px){
- 
-  .single-gallery-bottom{
-    margin-left: 50px;
-  }
-  .single-gallery-bottom{
-    max-width: 700px;
-  }
-
-}
-@media only screen and (max-width: 1122px){
-
-  .single-gallery-bottom{
-    margin-left: 50px;
-  }
-  .single-gallery-bottom{
-    max-width: 650px;
-  }
-
-}
-@media only screen and (max-width: 1013px){
-  
-  .single-gallery-bottom{
-    margin-left: 50px;
-  }
-  .single-gallery-bottom{
-    max-width: 500px;
-  }
-
-}
-@media only screen and (max-width: 980px){
-  .single-gallery-main{
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-  .single-gallery-bottom{
-    margin-left: 0px;
-  }
-  .news-right-innerpages{
-    right: 0;
-    
-  }
-}
-@media only screen and (max-width: 712px){
- 
-  .single-gallery-bottom{
-    max-width: 80%;
-  }
-
-}
 
 
 

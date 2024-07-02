@@ -24,7 +24,8 @@
   .gallery {
     margin-top: 1vw;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 150px);
     grid-gap: 2px;
   }
   
@@ -34,12 +35,18 @@
     min-height: 100%;
   }
   
-  .portrait {
-    grid-row: span 2;
+  .small {
+    grid-row:span 1;
+    grid-column: span 1;
   }
 
   
-  .wide {
+  .medium {
+   grid-row:span 1;
+    grid-column: span 2;
+  }
+  .big {
+    grid-row:span 2;
     grid-column: span 2;
   }
   
