@@ -1925,9 +1925,7 @@ ABOUT KEDA PAGE
 
 .innerpage-main-left-item:hover {
   color: #333333;
-  -webkit-transform: translateX(10px);
-  -ms-transform: translateX(10px);
-  transform: translateX(10px);
+  border: 1px solid #00923F;
 
 
 }
@@ -2933,7 +2931,7 @@ ABOUT KEDA PAGE
     -o-transition: 550ms ease;
     transition: 550ms ease;
     overflow: hidden;
-    /* overflow-y: scroll; */
+    background-color: white;
   }
 
   .mbn-wrapper {
@@ -2942,6 +2940,7 @@ ABOUT KEDA PAGE
     display: flex;
     width: auto;
     padding-left: 10px;
+    margin-top: 50px;
 
   }
 
