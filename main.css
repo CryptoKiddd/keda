@@ -1917,7 +1917,7 @@ ABOUT KEDA PAGE
 .news-right-innerpages {
   position: absolute;
   height: 100%;
-  max-height: 967px;
+  min-height: 967px;
   top: -133px;
   right: 0;
 
@@ -2837,7 +2837,11 @@ ABOUT KEDA PAGE
 
 
 }
-
+@media only screen and (max-width: 1130px) {
+  .text-g-wrapper{
+    max-width: 650px;
+  }
+}
 @media only screen and (max-width: 1070px) {
   .news-container,
   .announcments-container,
@@ -2888,7 +2892,10 @@ ABOUT KEDA PAGE
   .navigation {
     display: none;
   }
-
+  .text-g-cont{
+    flex-direction: column;
+    align-items: center;
+  }
   #hamburger {
     display: block;
     /* position: absolute; */
@@ -3323,9 +3330,7 @@ ABOUT KEDA PAGE
     min-width: 0;
   }
 
-  .news-right-innerpages {
-    display: none;
-  }
+
 
   .innerpage-sakrebulo-news-item-right h4 {
     font-size: 13px;

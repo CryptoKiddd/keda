@@ -39,4 +39,7 @@ textGalleryImages.forEach((img)=>{
    
     item.appendChild(g_img)
     galleryContainer.appendChild(item)
+    g_img.addEventListener('click',()=>{
+        mainImage.src=img
+    })
 })
