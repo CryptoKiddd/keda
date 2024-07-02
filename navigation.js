@@ -81,15 +81,7 @@ window.addEventListener('scroll',()=>{
 
 
 
-if(window.innerWidth <= 980){
-    let parent = document.querySelector('.innerpage-main')
-    let child = document.querySelector('.news-right-innerpages')
-    let mobileParent = document.querySelector('.innerpage-main-bottom')
 
-    parent.removeChild(child)
-    mobileParent.appendChild(child)
-    child.style.position="relative"
-}
 
 const lang2 = document.getElementById('lang')
 
